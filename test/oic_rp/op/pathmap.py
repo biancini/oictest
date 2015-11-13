@@ -70,8 +70,12 @@ IDMAP = {
     "rp-clm-idt": NORMAL,
     # "rp-3rd-login": "",
     "rp-clm-aggreg": "/_/_/_/_/aggregate",
-    "rp-clm-dist": "/_/_/_/_/distributed"
+    "rp-clm-dist": "/_/_/_/_/distributed",
     # "rp-logout-init": "",
     # "rp-logout-received": "",
-    # "rp-change-received": ""
+    # "rp-change-received": "",
+    "rp-discovery-webfinger_url": NORMAL,
+    "rp-discovery-webfinger_acct": NORMAL,
+    "rp-discovery": NORMAL,
+    "rp-discovery-issuer_not_matching_config": NORMAL,
 }

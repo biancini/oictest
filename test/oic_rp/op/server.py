@@ -511,7 +511,10 @@ def application(environ, start_response):
 
             LOGGER.info("callback: %s" % callback)
             try:
-                return callback(environ, start_response, session, trace)
+                if hasattr(callback, 'func'):
+                    return callback.func(environ, start_response, session, trace)
+                else:
+                    return callback(environ, start_response, session, trace)
             except Exception as err:
                 print >> sys.stderr, "%s" % err
                 message = traceback.format_exception(*sys.exc_info())
