@@ -29,3 +29,7 @@ tmp*
 .coverage
 *.tmpl
 log/
+test/oic_rp/op/client_db
+test/oic_rp/op/config.py
+test/oic_rp/op/modules
+test/oic_rp/op/static/jwk.json
