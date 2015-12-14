@@ -183,8 +183,6 @@ def wsgi_wrapper(environ, start_response, func, session, trace):
         resp = args
         trace.reply(resp.message)
         dump_log(session, trace)
-	if resp.message.find('?') < 0 and resp.message.find('#') > 0:
-	    resp.message = resp.message.replace('#', '?', 1)
         return resp(environ, start_response)
     except Exception as err:
         LOGGER.error("%s" % err)
